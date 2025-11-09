@@ -1,0 +1,60 @@
+---
+// src/layouts/Layout.astro
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Protected Site</title>
+  </head>
+  <body>
+    <script>
+      // Check authentication at the layout level
+      if (typeof sessionStorage !== 'undefined' && !sessionStorage.getItem('authenticated')) {
+        // Redirect to auth page or show auth component
+        document.body.innerHTML = `
+          <div style="max-width: 400px; margin: 100px auto; padding: 20px; text-align: center;">
+            <h2>Enter Password</h2>
+            <input type="password" id="password-input" placeholder="Enter site password" 
+                   style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ddd; border-radius: 4px;">
+            <button onclick="checkPassword()" 
+                    style="padding: 10px 20px; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">
+              Enter Site
+            </button>
+            <p id="error-message" style="color: red; margin-top: 10px;"></p>
+          </div>
+        `;
+        
+        window.checkPassword = function() {
+          const passwordInput = document.getElementById('password-input');
+          const errorMessage = document.getElementById('error-message');
+          const correctPassword = 'your-secure-password'; // Change this!
+          
+          if (passwordInput.value === correctPassword) {
+            sessionStorage.setItem('authenticated', 'true');
+            window.location.reload();
+          } else {
+            errorMessage.textContent = 'Incorrect password. Please try again.';
+            passwordInput.value = '';
+          }
+        };
+      } else {
+        // User is authenticated, show normal content
+    </script>
+    
+    <!-- Your normal site content -->
+    <header>
+      <!-- Your header content -->
+    </header>
+    <main>
+      <slot />
+    </main>
+    
+    <script>
+      // Close the else block from above
+      }
+    </script>
+  </body>
+</html>

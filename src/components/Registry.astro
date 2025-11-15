@@ -1,13 +1,32 @@
 ---
 ---
 
-<section id="registry" class="py-20 md:py-32 bg-gradient-to-b from-neutral-50 to-white">
+<section id="registry" class="relative py-20 md:py-32 bg-gradient-to-b from-neutral-50 to-white overflow-hidden">
+  <!-- Top Left Flower -->
+  <div class="hidden md:block absolute -top-16 -left-16 w-48 h-48 transform -rotate-12 opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+  
+  <!-- Top Right Flower -->
+  <div class="hidden md:block absolute -top-16 -right-16 w-48 h-48 transform rotate-12 scale-x-[-1] opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
   <div class="container mx-auto px-4 max-w-4xl">
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">
         Gift Registry
       </h2>
-      <div class="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
+      <div class="w-24 h-1 bg-[#560082] mx-auto mb-6"></div>
       <div class="space-y-4 text-neutral-600 text-lg max-w-2xl mx-auto">
         <p>
           We are so excited to celebrate our special day with y'all! The best gift we could get is to have our families and friends gathered to support us as we begin this new part of our lives together.
@@ -24,7 +43,7 @@
         href="https://bedbathandbeyond.myregistry.com/wedding-registry/katie-wenger-and-clark-abbott-arlington-va/5064252" 
         target="_blank"
         rel="noopener noreferrer"
-        class="block bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105 h-full flex flex-col"
+        class="block bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all h-full flex flex-col hover:ring-2 hover:ring-[#560082] focus:outline-none focus:ring-2 focus:ring-[#560082] hover:bg-[#560082]/10"
       >
         <div class="flex-grow flex items-center justify-center mb-6">
           <img 
@@ -36,7 +55,7 @@
         </div>
         <div class="text-center mt-auto">
           <p class="text-neutral-600 text-sm mb-2">Gift Registry</p>
-          <span class="text-primary-600 font-medium hover:underline">View →</span>
+          <span class="text-[#560082] font-medium hover:underline">View →</span>
         </div>
       </a>
       
@@ -45,7 +64,7 @@
         href="https://withjoy.com/katie-and-clark-aug-26/registry" 
         target="_blank"
         rel="noopener noreferrer"
-        class="block bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105 h-full flex flex-col border-2 border-primary-100"
+        class="block bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all h-full flex flex-col hover:ring-2 hover:ring-[#560082] focus:outline-none focus:ring-2 focus:ring-[#560082] hover:bg-[#560082]/10"
       >
         <div class="flex-grow flex items-center justify-center mb-6">
           <img 
@@ -57,9 +76,29 @@
         </div>
         <div class="text-center mt-auto">
           <p class="text-neutral-600 text-sm mb-2">Cash Registry</p>
-          <span class="text-primary-600 font-medium hover:underline">View →</span>
+          <span class="text-[#560082] font-medium hover:underline">View →</span>
         </div>
       </a>
+    </div>
+    
+    <!-- Bottom Left Flower -->
+    <div class="hidden md:block absolute -bottom-24 -left-16 w-48 h-48 transform rotate-180 opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
+    </div>
+    
+    <!-- Bottom Right Flower -->
+    <div class="hidden md:block absolute -bottom-24 -right-16 w-48 h-48 transform rotate-180 scale-x-[-1] opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>

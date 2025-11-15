@@ -1,13 +1,32 @@
 ---
 ---
 
-<section id="details" class="py-20 md:py-32 bg-gradient-to-b from-white to-neutral-50">
+<section id="details" class="relative py-20 md:py-32 bg-white overflow-hidden">
+  <!-- Top Left Flower -->
+  <div class="hidden md:block absolute -top-16 -left-16 w-48 h-48 transform -rotate-12 opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+  
+  <!-- Top Right Flower -->
+  <div class="hidden md:block absolute -top-16 -right-16 w-48 h-48 transform rotate-12 scale-x-[-1] opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">
         Wedding Details
       </h2>
-      <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+      <div class="w-24 h-1 bg-[#560082] mx-auto"></div>
     </div>
     
     <div class="grid md:grid-cols-2 gap-8 mb-16">
@@ -16,7 +35,7 @@
         href="https://maps.app.goo.gl/qVSspDQC5aVpQ4zz7" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="block h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden hover:ring-2 hover:ring-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+        class="block h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden hover:ring-2 hover:ring-[#560082] focus:outline-none focus:ring-2 focus:ring-[#560082] hover:bg-[#560082]/10"
       >
         <div class="w-full h-48 overflow-hidden">
           <img 
@@ -51,7 +70,7 @@
         href="https://maps.app.goo.gl/d4JSjt2TUZsjS7Ed7" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="block h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden hover:ring-2 hover:ring-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+        class="block h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden hover:ring-2 hover:ring-[#560082] focus:outline-none focus:ring-2 focus:ring-[#560082] hover:bg-[#560082]/10"
       >
         <div class="w-full h-48 overflow-hidden">
           <img 
@@ -70,7 +89,7 @@
             <span class="font-semibold">Date:</span> Saturday, August 8, 2026
           </p>
           <p class="text-neutral-700">
-            <span class="font-semibold">Time:</span> 4:30 PM - 10:00 PM
+            <span class="font-semibold">Time:</span> 4:30 PM - 9:30 PM
           </p>
           <p class="text-neutral-700">
             <span class="font-semibold">Location:</span><br/>
@@ -80,6 +99,26 @@
           </p>
         </div>
       </a>
+    </div>
+    
+    <!-- Bottom Left Flower -->
+    <div class="hidden md:block absolute -bottom-24 -left-16 w-48 h-48 transform rotate-180 opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
+    </div>
+    
+    <!-- Bottom Right Flower -->
+    <div class="hidden md:block absolute -bottom-24 -right-16 w-48 h-48 transform rotate-180 scale-x-[-1] opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>

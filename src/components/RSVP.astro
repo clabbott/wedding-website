@@ -1,14 +1,41 @@
 ---
 ---
 
-<section id="rsvp" class="py-20 md:py-32 bg-white">
+<section id="rsvp" class="relative py-20 overflow-hidden">
+  <!-- Top Left Flower -->
+  <div class="hidden md:block absolute -top-16 -left-16 w-48 h-48 transform -rotate-12 opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+  
+  <!-- Top Right Flower -->
+  <div class="hidden md:block absolute -top-16 -right-16 w-48 h-48 transform rotate-12 scale-x-[-1] opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+  <!-- Background with gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-100 via-accent-50 to-primary-50 -z-10"></div>
+  
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 opacity-10 -z-10">
+    <div class="absolute top-20 left-10 w-64 h-64 bg-primary-300 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-300 rounded-full blur-3xl"></div>
+  </div>
   <div class="container mx-auto px-4 max-w-4xl">
     <!-- Header -->
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">
         RSVP
       </h2>
-      <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+      <div class="w-24 h-1 bg-[#560082] mx-auto mb-8"></div>
     </div>
 
     <!-- RSVP Button -->
@@ -17,7 +44,7 @@
         href="https://withjoy.com/katie-and-clark-aug-26/rsvp" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="inline-flex items-center justify-center px-16 py-6 bg-primary-500 hover:bg-primary-600 text-white text-2xl font-semibold rounded-full transition duration-200 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+        class="inline-flex items-center justify-center px-16 py-6 bg-[#560082] hover:bg-[#45006b] text-white text-2xl font-semibold rounded-full transition duration-200 transform hover:scale-105 shadow-xl hover:shadow-2xl"
       >
         RSVP Now
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-4" viewBox="0 0 20 20" fill="currentColor">
@@ -30,18 +57,40 @@
     <div class="w-full max-w-3xl mx-auto">
       <div class="relative transform hover:scale-102 transition-transform duration-500">
         <div class="absolute -inset-6 bg-accent-300 rounded-3xl blur-2xl opacity-20"></div>
-        <div class="relative overflow-hidden rounded-2xl border-4 border-white shadow-2xl">
-          <img 
-            src="/wedding-website/images/SP_0009.jpg" 
-            alt="Come hang with us!" 
-            class="w-full h-auto"
-            loading="lazy"
-          />
-          <div class="absolute bottom-6 right-6 bg-primary-500 text-white text-lg font-bold px-6 py-3 rounded-full transform rotate-3 shadow-lg">
-            Come hang with us! 🎉
+        <div class="relative">
+          <div class="relative overflow-hidden rounded-2xl border-4 border-white shadow-2xl inline-block">
+            <img 
+              src="/wedding-website/images/SP_0009.jpg" 
+              alt="Come hang with us!" 
+              class="w-full h-auto block"
+              loading="lazy"
+            />
+            <div class="absolute bottom-6 right-6 bg-[#560082] text-white text-lg font-bold px-6 py-3 rounded-full transform rotate-3 shadow-lg">
+              Come hang with us! 🎉
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    
+    <!-- Bottom Left Flower -->
+    <div class="hidden md:block absolute -bottom-24 -left-16 w-48 h-48 transform rotate-180 opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
+    </div>
+    
+    <!-- Bottom Right Flower -->
+    <div class="hidden md:block absolute -bottom-24 -right-16 w-48 h-48 transform rotate-180 scale-x-[-1] opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>

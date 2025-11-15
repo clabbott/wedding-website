@@ -1,77 +1,52 @@
 ---
 ---
 
-<section id="transportation" class="py-20 bg-gray-50">
+<section id="transportation" class="relative py-20 overflow-hidden">
+  <!-- Top Left Flower -->
+  <div class="hidden md:block absolute -top-16 -left-16 w-48 h-48 transform -rotate-12 opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+  
+  <!-- Top Right Flower -->
+  <div class="hidden md:block absolute -top-16 -right-16 w-48 h-48 transform rotate-12 scale-x-[-1] opacity-20">
+    <img 
+      src="/wedding-website/images/flowers.PNG" 
+      alt="" 
+      class="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+  <!-- Background with gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-100 via-accent-50 to-primary-50 -z-10"></div>
+  
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 opacity-10 -z-10">
+    <div class="absolute top-20 left-10 w-64 h-64 bg-primary-300 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-300 rounded-full blur-3xl"></div>
+  </div>
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">
         Transportation
       </h2>
-      <div class="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
+      <div class="w-24 h-1 bg-[#560082] mx-auto mb-6"></div>
       <p class="text-neutral-600 max-w-2xl mx-auto">
         Here are some options to help you get to our wedding venue, reception venue, and back to your accommodations.
       </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 mt-12">
-      <!-- Option 1 -->
-      <a 
-        href="https://parkmobile.io/" 
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-      >
-        <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-8">
-          <img 
-            src="/wedding-website/images/park_mobile.jpg" 
-            alt="Park Mobile" 
-            class="h-full w-auto object-contain"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-serif font-bold text-neutral-900 mb-2">Parking Options</h3>
-          <p class="text-neutral-600 mb-4">The St. George's parking lot fills up fast- lots of street parking is available nearby. River Road has many spots available in their lot.</p>
-          <span class="text-primary-600 font-medium inline-flex items-center group-hover:underline">
-            Learn more
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </span>
-        </div>
-      </a>
-
-      <!-- Option 2 -->
-      <a 
-        href="#" 
-        class="group block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-      >
-        <div class="h-48 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center p-8">
-          <img 
-            src="/wedding-website/images/Uber-Lyft-Logos.png" 
-            alt="Uber and Lyft" 
-            class="h-full w-auto object-contain"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-serif font-bold text-neutral-900 mb-2">Rideshare</h3>
-          <p class="text-neutral-600 mb-4">We recommend using Uber/Lyft to navigate the area.</p>
-          <span class="text-primary-600 font-medium inline-flex items-center group-hover:underline">
-            Learn more
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </span>
-        </div>
-      </a>
-
-      <!-- Option 3 -->
+      <!-- Option 1 - Metro -->
       <a 
         href="https://www.wmata.com/rider-guide/new-riders/index.cfm" 
         target="_blank"
         rel="noopener noreferrer"
-        class="group block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        class="group block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden hover:ring-2 hover:ring-[#560082] focus:outline-none focus:ring-2 focus:ring-[#560082] hover:bg-[#560082]/10"
       >
         <div class="h-48 bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center p-4">
           <img 
@@ -84,7 +59,7 @@
         <div class="p-6">
           <h3 class="text-xl font-serif font-bold text-neutral-900 mb-2">Public Transit</h3>
           <p class="text-neutral-600 mb-4">The DC Metro connects directly to all local airports and has stops near St. George's and the Arlington hotel option.</p>
-          <span class="text-primary-600 font-medium inline-flex items-center group-hover:underline">
+          <span class="text-[#560082] font-medium inline-flex items-center group-hover:underline">
             Learn more
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -92,6 +67,69 @@
           </span>
         </div>
       </a>
+
+      <!-- Option 2 - Rideshare -->
+      <div class="group block bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center p-8">
+          <img 
+            src="/wedding-website/images/Uber-Lyft-Logos.png" 
+            alt="Uber and Lyft" 
+            class="h-full w-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-serif font-bold text-neutral-900 mb-2">Rideshare</h3>
+          <p class="text-neutral-600">We recommend using Uber/Lyft to navigate the area.</p>
+        </div>
+      </div>
+
+      <!-- Option 3 - ParkMobile -->
+      <a 
+        href="https://parkmobile.io/" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden hover:ring-2 hover:ring-[#560082] focus:outline-none focus:ring-2 focus:ring-[#560082] hover:bg-[#560082]/10"
+      >
+        <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-8">
+          <img 
+            src="/wedding-website/images/park_mobile.jpg" 
+            alt="Park Mobile" 
+            class="h-full w-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-serif font-bold text-neutral-900 mb-2">Parking Options</h3>
+          <p class="text-neutral-600 mb-4">The St. George's parking lot fills up fast but lots of street parking is available nearby. We recommend downloading the ParkMobile app to search for street parking. River Road has many spots available in their lot.</p>
+          <span class="text-[#560082] font-medium inline-flex items-center group-hover:underline">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Bottom Left Flower -->
+    <div class="hidden md:block absolute -bottom-24 -left-16 w-48 h-48 transform rotate-180 opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
+    </div>
+    
+    <!-- Bottom Right Flower -->
+    <div class="hidden md:block absolute -bottom-24 -right-16 w-48 h-48 transform rotate-180 scale-x-[-1] opacity-20">
+      <img 
+        src="/wedding-website/images/flowers.PNG" 
+        alt="" 
+        class="w-full h-full object-contain"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>

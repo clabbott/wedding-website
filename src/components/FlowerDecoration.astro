@@ -1,0 +1,54 @@
+---
+interface Props {
+  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'left' | 'right';
+  size?: 'sm' | 'md' | 'lg';
+  rotate?: number;
+  flipX?: boolean;
+}
+
+const { position, size = 'md', rotate = 0, flipX = false } = Astro.props;
+
+const sizeClasses = {
+  sm: 'w-24 h-24',
+  md: 'w-32 h-32',
+  lg: 'w-48 h-48'
+};
+
+const positionClasses = {
+  'top-left': 'top-0 left-0 -translate-x-1/2 -translate-y-1/2',
+  'top-right': 'top-0 right-0 translate-x-1/2 -translate-y-1/2',
+  'bottom-left': 'bottom-0 left-0 -translate-x-1/2 translate-y-1/2',
+  'bottom-right': 'bottom-0 right-0 translate-x-1/2 translate-y-1/2',
+  'left': 'left-0 top-1/2 -translate-x-1/2 -translate-y-1/2',
+  'right': 'right-0 top-1/2 translate-x-1/2 -translate-y-1/2'
+};
+
+const rotationClasses = {
+  0: 'rotate-0',
+  45: 'rotate-45',
+  90: 'rotate-90',
+  135: 'rotate-[135deg]',
+  180: 'rotate-180',
+  225: 'rotate-[225deg]',
+  270: 'rotate-270',
+  315: 'rotate-[315deg]',
+  '-45': '-rotate-45',
+  '-90': '-rotate-90',
+  '-135': '-rotate-[135deg]',
+  '-180': '-rotate-180',
+  '-225': '-rotate-[225deg]',
+  '-270': '-rotate-270',
+  '-315': '-rotate-[315deg]',
+};
+
+const flipClass = flipX ? 'scale-x-[-1]' : '';
+---
+
+<div class={`absolute ${positionClasses[position]} ${sizeClasses[size]} ${rotationClasses[rotate as keyof typeof rotationClasses] || ''} ${flipClass} opacity-20`}>
+  <img 
+    src="/wedding-website/images/flowers.PNG" 
+    alt="" 
+    class="w-full h-full object-contain"
+    loading="lazy"
+  />
+</div>

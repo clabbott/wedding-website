@@ -1,26 +1,19 @@
 ---
+import FlowerDecoration from './FlowerDecoration.astro';
 ---
 
 <section id="rsvp" class="relative py-20 overflow-hidden">
-  <!-- Top Left Flower -->
-  <div class="hidden md:block absolute -top-16 -left-16 w-48 h-48 transform -rotate-12 opacity-20">
-    <img 
-      src="/wedding-website/images/flowers.PNG" 
-      alt="" 
-      class="w-full h-full object-contain"
-      loading="lazy"
-    />
-  </div>
+  <!-- Top Left Flower - Desktop -->
+  <FlowerDecoration position="top-left" size="lg" rotate={-12} class="hidden md:block" />
   
-  <!-- Top Right Flower -->
-  <div class="hidden md:block absolute -top-16 -right-16 w-48 h-48 transform rotate-12 scale-x-[-1] opacity-20">
-    <img 
-      src="/wedding-website/images/flowers.PNG" 
-      alt="" 
-      class="w-full h-full object-contain"
-      loading="lazy"
-    />
-  </div>
+  <!-- Top Left Flower - Mobile -->
+  <FlowerDecoration position="top-left" size="md" rotate={-30} class="md:hidden" />
+  
+  <!-- Top Right Flower - Desktop -->
+  <FlowerDecoration position="top-right" size="lg" rotate={12} flipX class="hidden md:block" />
+  
+  <!-- Top Right Flower - Mobile -->
+  <FlowerDecoration position="top-right" size="md" rotate={30} flipX class="md:hidden" />
   <!-- Background with gradient overlay -->
   <div class="absolute inset-0 bg-gradient-to-br from-primary-100 via-accent-50 to-primary-50 -z-10"></div>
   
@@ -73,24 +66,16 @@
       </div>
     </div>
     
-    <!-- Bottom Left Flower -->
-    <div class="hidden md:block absolute -bottom-24 -left-16 w-48 h-48 transform rotate-180 opacity-20">
-      <img 
-        src="/wedding-website/images/flowers.PNG" 
-        alt="" 
-        class="w-full h-full object-contain"
-        loading="lazy"
-      />
-    </div>
-    
-    <!-- Bottom Right Flower -->
-    <div class="hidden md:block absolute -bottom-24 -right-16 w-48 h-48 transform rotate-180 scale-x-[-1] opacity-20">
-      <img 
-        src="/wedding-website/images/flowers.PNG" 
-        alt="" 
-        class="w-full h-full object-contain"
-        loading="lazy"
-      />
-    </div>
+    <!-- Bottom Left Flower - Desktop -->
+  <FlowerDecoration position="bottom-left" size="lg" rotate={180} class="hidden md:block" />
+  
+  <!-- Bottom Left Flower - Mobile -->
+  <FlowerDecoration position="bottom-left" size="md" rotate={-150} class="md:hidden" />
+  
+  <!-- Bottom Right Flower - Desktop -->
+  <FlowerDecoration position="bottom-right" size="lg" rotate={180} flipX class="hidden md:block" />
+  
+  <!-- Bottom Right Flower - Mobile -->
+  <FlowerDecoration position="bottom-right" size="md" rotate={150} flipX class="md:hidden" />
   </div>
 </section>

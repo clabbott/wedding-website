@@ -1,0 +1,100 @@
+---
+import FlowerDecoration from './FlowerDecoration.astro';
+---
+
+<section id="faq" class="relative py-20 overflow-hidden">
+  <!-- Top Left Flower - Desktop -->
+  <FlowerDecoration position="top-left" size="lg" rotate={-12} class="hidden md:block" />
+  
+  <!-- Top Left Flower - Mobile -->
+  <FlowerDecoration position="top-left" size="md" rotate={-30} class="md:hidden" />
+  
+  <!-- Top Right Flower - Desktop -->
+  <FlowerDecoration position="top-right" size="lg" rotate={12} flipX class="hidden md:block" />
+  
+  <!-- Top Right Flower - Mobile -->
+  <FlowerDecoration position="top-right" size="md" rotate={30} flipX class="md:hidden" />
+  
+  <!-- Background with gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-100 via-accent-50 to-primary-50 -z-10"></div>
+  
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 opacity-10 -z-10">
+    <div class="absolute top-20 left-10 w-64 h-64 bg-primary-300 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-300 rounded-full blur-3xl"></div>
+  </div>
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-[#560082] mb-12">Frequently Asked Questions</h2>
+    
+    <div class="max-w-3xl mx-auto space-y-8">
+      <!-- Question 1 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">What should I wear?</h3>
+        <p class="text-gray-700">We recommend semi-formal attire. (Learn more <a href="#" class="text-[#560082] hover:underline">here</a>.)</p>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">How do I get from the airport to the hotel?</h3>
+        <p class="text-gray-700 mb-2">Both hotels are metro accessible from both the Reagan and Dulles airports. The Hilton Arlington is a 1-minute walk from the Ballston metro stop, and the Bethesdan is a 10-minute walk from the Bethesda metro stop.</p>
+        <p class="text-gray-700">You can also use Uber or Lyft or rent a car.</p>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">How do I get to the ceremony?</h3>
+        <p class="text-gray-700">The ceremony at St. George's is 1 block away from the Virginia Square metro stop and a 10-minute walk from the Hilton Arlington.</p>
+        <p class="text-gray-700 mt-2">Limited parking is available in the St. George's parking lot. There is street parking available on the nearby streets; you can pay using the Park Mobile app.</p>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">How do I get from the ceremony to the reception?</h3>
+        <p class="text-gray-700">We recommend carpooling or sharing an Uber or Lyft. Please let us know in your RSVP form if you would like us to help connect you to others to carpool with. It is about a 35-minute drive from the ceremony at St. George's to the reception at River Road. Please make sure to choose a designated driver for after the reception or use a ridesharing service.</p>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">Where do I eat breakfast and lunch?</h3>
+        <p class="text-gray-700">Breakfast is not included in either hotel but is available for purchase at the on-site restaurants. There are also grocery stores, cafes, and restaurants within close walking distance of both hotels.</p>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">How much is parking at the hotel?</h3>
+        <p class="text-gray-700">Parking is $22 per night at the Arlington Hilton.</p>
+        <p class="text-gray-700">Parking is $40 per night at the Bethesdan, but cheaper parking is available at <a href="https://maps.app.goo.gl/UsLoG8QFP7wSvJrK9" target="_blank" rel="noopener noreferrer" class="text-[#560082] hover:underline">Montgomery County Garage 35</a> across the street.</p>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">Can I invite a plus one or my children?</h3>
+        <p class="text-gray-700">We have limited space, so we can only accommodate guests whose names are listed on the envelope. Thank you for understanding.</p>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">Do you have recommended babysitters?</h3>
+        <p class="text-gray-700">Reach out to us if you would like help finding a local babysitter in Arlington.</p>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold text-[#560082] mb-2">Will the wedding be indoors or outdoors?</h3>
+        <p class="text-gray-700">The wedding ceremony and reception will be indoors, but we are planning to take pictures outdoors if weather permits. Please keep in mind that the weather is usually hot and humid in DC in August.</p>
+      </div>
+    </div>
+    
+    <!-- Bottom Left Flower - Desktop -->
+    <FlowerDecoration position="bottom-left" size="lg" rotate={180} class="hidden md:block" />
+    
+    <!-- Bottom Left Flower - Mobile -->
+    <FlowerDecoration position="bottom-left" size="md" rotate={-150} class="md:hidden" />
+    
+    <!-- Bottom Right Flower - Desktop -->
+    <FlowerDecoration position="bottom-right" size="lg" rotate={180} flipX class="hidden md:block" />
+    
+    <!-- Bottom Right Flower - Mobile -->
+    <FlowerDecoration position="bottom-right" size="md" rotate={150} flipX class="md:hidden" />
+  </div>
+</section>

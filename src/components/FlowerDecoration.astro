@@ -4,9 +4,10 @@ interface Props {
   size?: 'sm' | 'md' | 'lg';
   rotate?: number;
   flipX?: boolean;
+  class?: string;
 }
 
-const { position, size = 'md', rotate = 0, flipX = false } = Astro.props;
+const { position, size = 'md', rotate = 0, flipX = false, class: extraClasses = '' } = Astro.props;
 
 const sizeClasses = {
   sm: 'w-24 h-24',
@@ -44,7 +45,7 @@ const rotationClasses = {
 const flipClass = flipX ? 'scale-x-[-1]' : '';
 ---
 
-<div class={`absolute ${positionClasses[position]} ${sizeClasses[size]} ${rotationClasses[rotate as keyof typeof rotationClasses] || ''} ${flipClass} opacity-20`}>
+<div class={`absolute ${positionClasses[position]} ${sizeClasses[size]} ${rotationClasses[rotate as keyof typeof rotationClasses] || ''} ${flipClass} opacity-20 ${extraClasses}`}>
   <img 
     src="/wedding-website/images/flowers.PNG" 
     alt="" 

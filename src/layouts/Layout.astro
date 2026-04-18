@@ -6,6 +6,12 @@ interface Props {
   description?: string;
 }
 
+declare global {
+  interface Window {
+    checkPassword: () => void;
+  }
+}
+
 const { title, description = "Join us in celebrating our special day" } = Astro.props;
 ---
 
@@ -113,14 +119,14 @@ const { title, description = "Join us in celebrating our special day" } = Astro.
         `;
         
         window.checkPassword = function() {
-          const passwordInput = document.getElementById('password-input');
+          const passwordInput = document.getElementById('password-input') as HTMLInputElement;
           const errorMessage = document.getElementById('error-message');
           const correctPassword = 'Arlington'; 
           
-          if (passwordInput.value === correctPassword) {
+          if (passwordInput && passwordInput.value === correctPassword) {
             sessionStorage.setItem('authenticated', 'true');
             window.location.reload();
-          } else {
+          } else if (passwordInput && errorMessage) {
             errorMessage.textContent = 'Incorrect password. Please try again.';
             errorMessage.classList.remove('hidden');
             passwordInput.value = '';
@@ -129,11 +135,14 @@ const { title, description = "Join us in celebrating our special day" } = Astro.
         };
         
         // Handle Enter key press
-        document.getElementById('password-input').addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            checkPassword();
-          }
-        });
+        const passwordInput = document.getElementById('password-input');
+        if (passwordInput) {
+          passwordInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+              window.checkPassword();
+            }
+          });
+        }
       }
     </script>
   </body>
